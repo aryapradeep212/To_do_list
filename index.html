@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <script>
+        function validate() {
+            var email = document.forms["loginForm"]["email"].value;
+            var password = document.forms["loginForm"]["password"].value;
+
+            if (email === "") {
+                alert("Email must be filled out");
+                return false;
+            }
+
+            if (password === "") {
+                alert("Password must be filled out");
+                return false;
+            }
+            else {
+                window.location.href = "home.html";  
+            }
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <center><br><br><br><br>
+        <h1 style="text-align: center;color: blue;font-size: 60px;">To Do List</h1>
+    <div style="border-radius: 50px;
+    box-shadow: 0 2px 4px rgba(0,0,0, .1), 0 8px 16px rgba(0,0,0, .1);
+    margin: auto;
+    padding: 0 0 14px 0;
+    width: 396px;"><br><br>
+    <h2 style="text-align: center;">Login to your account</h2><br>
+    E-mail: <input type="email" name="email" required /><br><br>
+    Password: <input type="password" name="password" required /><br><br>
+<input type="submit" onclick="validate()"><br>
+<p>Create an account <a href="signup.html">Sign up</a></p>
+</div></center>
+    </form>
+</body>
+</html>

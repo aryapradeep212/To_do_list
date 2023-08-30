@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function validate() {
+            var firstName = document.forms["signupForm"]["fname"].value;
+            var lastName = document.forms["signupForm"]["lname"].value;
+            var dob = document.forms["signupForm"]["dob"].value;
+            var email = document.forms["signupForm"]["email"].value;
+            var password = document.forms["signupForm"]["password"].value;
+            var confirmPassword = document.forms["signupForm"]["password1"].value;
+
+            if (firstName === "" || lastName === "" || dob === "" || email === "" || password === "" || confirmPassword === "") {
+                alert("All fields are required.");
+                return false;
+            }
+
+            if (password !== confirmPassword) {
+                alert("Passwords do not match.");
+                return false;
+            }
+            else {
+                alert("Login Successful");
+                window.location.replace("home.html");
+            }
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <center><br><br>
+        <h1 style="text-align: center;color: blue;font-size: 60px;">To Do List</h1>
+    <div style="border-radius: 50px;
+    box-shadow: 0 2px 4px rgba(0,0,0, .1), 0 8px 16px rgba(0,0,0, .1);
+    margin: auto;
+    padding: 0 0 14px 0;
+    width: 396px;"><br><br>
+    This is the Page created by Arya Pradeep. <br>
+    I am currently Persuing Diploma in Computer Engineering From Govt. Polytechnic College, Perumbavoor. <br><br><br>
+    E-mail id: aryapradeep212@gmail.com <br>
+    Phone No.: 8921590693 <br><br><br>
+    <p>Thank You</p>
+</div></center>
+    </form>
+</body>
+</html>
